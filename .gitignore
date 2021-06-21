@@ -1,0 +1,4 @@
+settings.json
+._pycache_
+.pytest_cache
+__pycache__
