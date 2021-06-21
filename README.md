@@ -13,18 +13,23 @@ python q3_can_create.py --list back end front end tree --inputStr frontend
 -------
  1. What technologies would you use to build out this platform? Please tell us the
 languages, databases, tools / servers you would use to build out the above platform.
-''
-''
+
+
 Languages : Golang, Python
-Database : Cassandra(used for high velocity writes, and lower velocity reads.)
+
+Database :  Cassandra(used for high velocity writes, and lower velocity reads.)
           ,Hadoop(used to process unstructured and large datasets, hundreds of billions of rows.)
 ,MySQL ( UserInfoMetadata), Redis ( Inmemory storage),Vertica (used for analytics and large aggregations and joins so they don’t have to write MapReduce jobs.)
+
 Tools: Zookeeper, Load Balancers, APi Server, 
-''
+
+
 -----------------
 2. Write the schema of your database that is going to store the data. We want to see this in
 detail to see where the all the different information will be stored
+
 Tweet Table:
+
 TweetID : int, PK
 UserID : int
 Content: varchar(140)
@@ -33,7 +38,8 @@ TweetLongitude : int
 UserLatitude : int
 UserLongitude: int
 CreationDate : datetime
-\
+
+
 User Table:
 UserID: int,PK
 Name : varchar(20)
@@ -41,10 +47,13 @@ Email : varchar(32)
 DOB : datetime
 CreationDate : datetime
 LastLogin : datetime
-\
+
+
 UserFollow:
 UserId1 : int,PK
 UserId2 : int,PK
+
+
 -----------------
  4. How much can the system you have built scale up to? What are the limiting factors of
 your system and when will it start failing?
